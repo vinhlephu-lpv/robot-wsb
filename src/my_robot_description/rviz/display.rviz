@@ -1,0 +1,174 @@
+Panels:
+  - Class: rviz_common/Displays
+    Help Height: 78
+    Name: Displays
+    Property Grid State:
+      expanded:
+        - /Global Options1
+        - /Status1
+        - /Robot 3D Model1
+        - /Camera Truoc (Live Stream)1
+        - /HUD Bang Diem & Tien Do1
+      split_ratio: 0.5
+    Tree Height: 450
+  - Class: rviz_common/Views
+    Expanded:
+      - /Current View1
+    Name: Views
+    Split Ratio: 0.5
+
+Visualization Manager:
+  Class: ""
+  Global Options:
+    Background Color: 48; 48; 48
+    Fixed Frame: odom
+    Frame Rate: 30
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Grid Mat San
+      Enabled: true
+      Plane: XY
+      Cell Size: 1
+      Plane Cell Count: 50
+      Color: 160; 160; 164
+      Line Style:
+        Line Width: 0.03
+        Value: Lines
+
+    - Class: rviz_default_plugins/RobotModel
+      Name: Robot 3D Model
+      Enabled: true
+      Description Source: Topic
+      Description Topic:
+        Depth: 5
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /robot_description
+      Visual Enabled: true
+      Collision Enabled: false
+
+    - Class: rviz_default_plugins/TF
+      Name: TF Toa Do
+      Enabled: true
+      Show Arrows: true
+      Show Axes: true
+      Show Names: false
+      Marker Scale: 0.3
+
+    - Class: rviz_default_plugins/LaserScan
+      Name: LiDAR C1 (Vat can & Luong ngo)
+      Enabled: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Best Effort
+        Value: /scan
+      Color: 255; 0; 0
+      Color Transformer: FlatColor
+      Size (Pixels): 3
+      Size (m): 0.05
+      Style: Points
+
+    - Class: rviz_default_plugins/Image
+      Name: Camera Truoc (Live Stream)
+      Enabled: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /camera/color/image_raw
+      Normalize Range: false
+
+    - Class: rviz_default_plugins/Odometry
+      Name: EKF Odometry (Huong & Vi tri xe)
+      Enabled: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /odometry/filtered
+      Color: 0; 255; 0
+      Keep: 100
+      Shape:
+        Alpha: 1.0
+        Axes Length: 0.3
+        Axes Radius: 0.03
+        Color: 0; 255; 0
+        Head Length: 0.15
+        Head Radius: 0.06
+        Shaft Length: 0.3
+        Shaft Radius: 0.02
+        Value: Arrow
+
+    - Class: rviz_default_plugins/Path
+      Name: Quy dao Omega Turn (Quay dau 1.2m)
+      Enabled: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /plan
+      Color: 0; 255; 0
+      Line Width: 0.05
+
+    - Class: rviz_default_plugins/MarkerArray
+      Name: HUD Bang Diem & Tien Do
+      Enabled: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /mission_markers
+
+    - Class: rviz_default_plugins/Map
+      Name: Costmap (Vung an toan)
+      Enabled: true
+      Topic:
+        Depth: 5
+        Durability Policy: Transient Local
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /costmap
+      Color Scheme: costmap
+      Alpha: 0.55
+      Draw Behind: false
+
+    - Class: rviz_default_plugins/Polygon
+      Name: Robot Footprint
+      Enabled: true
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /local_costmap/published_footprint
+      Color: 255; 255; 255
+
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 6.0
+      Focal Point:
+        X: 0.0
+        Y: 0.0
+        Z: 0.0
+      Name: Current View
+      Near Clip Distance: 0.01
+      Pitch: 0.6
+      Target Frame: <Fixed Frame>
+      Value: Orbit (rviz)
+      Yaw: 0.785398
+
+Window Geometry:
+  Displays:
+    collapsed: false
+  Height: 850
+  Width: 1280
+  X: 50
+  Y: 50
